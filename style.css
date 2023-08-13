@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+#container-productos {
+    color: gainsboro;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.ajuste-imagen {
+    width: 200px;
+    height: 325px;
+}
