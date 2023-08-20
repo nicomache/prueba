@@ -1,4 +1,4 @@
-*{
+/* *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -16,4 +16,8 @@
 .ajuste-imagen {
     width: 200px;
     height: 325px;
+}
+
+#boton{
+  color:azure;
 }
