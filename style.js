@@ -1,21 +1,3 @@
-const menu = document.getElementById("container-menu");
-menu.innerHTML = `
-<button id="iniciar-sesion">Iniciar Sesión</button>
-<button id="carrito">Carrito</button>
-`
-document.body.appendChild(menu);
-
-const iniciarSesion = document.getElementById("iniciar-sesion");
-iniciarSesion.addEventListener("click", ()=> {
-    // nose como hacer para que me lleve a una pagina dentro de la misma pagina, para realizar el inicio de sesion"
-})
-
-const btnCarrito = document.getElementById("carrito");
-btnCarrito.addEventListener("click", ()=> {
-    // aca lo mismo. Quiero q dentro de la misma pagina me lleve al carrito y se pueda ver su contenido
-})
-
-
 let productos = [
     { nombre: "television", id: 1, precio: 150000, marca: "Samsung", cantidad: 20, imagen: `<img src="tele.jpg" class="ajuste-imagen">` },
     { nombre: "heladera", id: 2,precio: 250000, marca: "Patrick", cantidad: 10, imagen:`<img src="heladera.jpeg" class="ajuste-imagen">` },
@@ -48,7 +30,12 @@ let productos = [
     document.getElementById(`${item.id}-add`).addEventListener("click", ()=>{
         agregarAlCarrito(item)
     })
-    });
+
+    document.getElementById(`${item.id}-buy`).addEventListener("click", ()=>{
+        console.log(item)
+        comprar(item);
+    })
+});
 
       
     function agregarAlCarrito(item) {
@@ -60,3 +47,29 @@ let productos = [
         localStorage.setItem("carrito", JSON.stringify(carrito))
     }
    
+    const comprar = (item) => {
+        let total = carrito.reduce((acum, producto) => acum + producto.precio, 0);
+        let compraDefinitiva = document.createElement("input")
+        compraDefinitiva.setAttribute("type", "text")
+        compraDefinitiva.setAttribute("placeholder", "¿Desea comprar ahora?")
+        document.header.appendChild(compraDefinitiva)
+    }
+
+    const menu = document.getElementById("container-menu");
+menu.innerHTML = 
+// <button id="iniciar-sesion">Iniciar Sesión</button>
+`
+<button id="carrito">Carrito</button>
+`
+document.header.appendChild(menu);
+
+/*const iniciarSesion = document.getElementById("iniciar-sesion");
+iniciarSesion.addEventListener("click", ()=> {
+    location.href = "./anexoUsuario.html"
+})*/
+
+const btnCarrito = document.getElementById("carrito");
+btnCarrito.addEventListener("click", ()=> {
+    location.href = "./anexoCarrito.html"
+    comprar();
+})
