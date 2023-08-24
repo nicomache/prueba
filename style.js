@@ -54,22 +54,25 @@ let productos = [
         compraDefinitiva.setAttribute("placeholder", "¿Desea comprar ahora?")
         document.header.appendChild(compraDefinitiva)
     }
-
+/*
     const menu = document.getElementById("container-menu");
 menu.innerHTML = 
 // <button id="iniciar-sesion">Iniciar Sesión</button>
 `
-<button id="carrito">Carrito</button>
+<button id="carrito"><i class="fas fa-shopping-cart"></i>
+</button>
 `
-document.header.appendChild(menu);
+document.header.append(menu);
 
 /*const iniciarSesion = document.getElementById("iniciar-sesion");
 iniciarSesion.addEventListener("click", ()=> {
     location.href = "./anexoUsuario.html"
-})*/
+})
 
 const btnCarrito = document.getElementById("carrito");
 btnCarrito.addEventListener("click", ()=> {
     location.href = "./anexoCarrito.html"
     comprar();
 })
+
+*/

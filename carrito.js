@@ -1,0 +1,1 @@
+let carrito = localStorage.getItem("carrito", JSON.stringify(carrito))
