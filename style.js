@@ -49,10 +49,9 @@ let productos = [
    
     const comprar = (item) => {
         let total = carrito.reduce((acum, producto) => acum + producto.precio, 0);
-        let compraDefinitiva = document.createElement("input")
-        compraDefinitiva.setAttribute("type", "text")
-        compraDefinitiva.setAttribute("placeholder", "¿Desea comprar ahora?")
-        document.header.appendChild(compraDefinitiva)
+        let compraDefinitiva = prompt(`¿Desea comprar ${item.nombre} a ${item.precio}?`)
+        let compraCerrada = compraDefinitiva == "si" ? "Su compra ha sido exitosa" : "";
+        alert(compraCerrada)
     }
 /*
     const menu = document.getElementById("container-menu");
@@ -76,3 +75,12 @@ btnCarrito.addEventListener("click", ()=> {
 })
 
 */
+
+
+
+
+/*
+let compraDefinitiva = document.createElement("input")
+compraDefinitiva.setAttribute("type", "text")
+compraDefinitiva.setAttribute("placeholder", "¿Desea comprar ahora?")
+document.header.appendChild(compraDefinitiva) */
