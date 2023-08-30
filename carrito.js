@@ -22,4 +22,4 @@ const comprar = () => {
 
 document.getElementById("compra").addEventListener ("click", ()=>{ 
     comprar()
-})
+});

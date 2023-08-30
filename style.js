@@ -53,34 +53,3 @@ let productos = [
         let compraCerrada = compraDefinitiva == "si" ? "Su compra ha sido exitosa" : "";
         alert(compraCerrada)
     }
-/*
-    const menu = document.getElementById("container-menu");
-menu.innerHTML = 
-// <button id="iniciar-sesion">Iniciar Sesión</button>
-`
-<button id="carrito"><i class="fas fa-shopping-cart"></i>
-</button>
-`
-document.header.append(menu);
-
-/*const iniciarSesion = document.getElementById("iniciar-sesion");
-iniciarSesion.addEventListener("click", ()=> {
-    location.href = "./anexoUsuario.html"
-})
-
-const btnCarrito = document.getElementById("carrito");
-btnCarrito.addEventListener("click", ()=> {
-    location.href = "./anexoCarrito.html"
-    comprar();
-})
-
-*/
-
-
-
-
-/*
-let compraDefinitiva = document.createElement("input")
-compraDefinitiva.setAttribute("type", "text")
-compraDefinitiva.setAttribute("placeholder", "¿Desea comprar ahora?")
-document.header.appendChild(compraDefinitiva) */
